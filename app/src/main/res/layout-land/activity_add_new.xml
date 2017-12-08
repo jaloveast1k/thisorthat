@@ -1,0 +1,184 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3a3a3c" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="90" >
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center_vertical"
+                android:text="@string/add_quest"
+                android:textColor="@color/main_text" />
+
+            <ImageView
+                android:id="@+id/coinsIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/coin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="530"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:id="@+id/answerUp"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="265"
+                android:background="@drawable/answer_selector_up" >
+
+                <EditText
+                    android:id="@+id/textUp"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:background="@android:color/transparent"
+                    android:gravity="center"
+                    android:hint="@string/var1"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:maxLength="150"
+                    android:nextFocusDown="@+id/textDown"
+                    android:nextFocusForward="@+id/textDown"
+                    android:paddingLeft="@dimen/main_text_padding"
+                    android:paddingRight="@dimen/main_text_padding"
+                    android:textColor="@color/main_text"
+                    android:textColorHint="#ddd" />
+
+                <View
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/answerDown"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="265"
+                android:background="@drawable/answer_selector_down" >
+	            <LinearLayout
+	                android:layout_width="match_parent"
+	                android:layout_height="match_parent" >
+	
+	                <View
+	                    android:layout_width="0dip"
+	                    android:layout_height="wrap_content"
+	                    android:layout_weight="1" />
+	
+	                <EditText
+	                    android:id="@+id/textDown"
+	                    android:layout_width="match_parent"
+	                    android:layout_height="match_parent"
+	                    android:layout_centerInParent="true"
+	                    android:background="@android:color/transparent"
+	                    android:gravity="center"
+	                    android:hint="@string/var2"
+	                    android:imeOptions="actionDone"
+	                    android:inputType="textCapSentences|textMultiLine"
+	                    android:maxLength="150"
+	                    android:paddingLeft="@dimen/main_text_padding"
+	                    android:paddingRight="@dimen/main_text_padding"
+	                    android:textColor="@color/main_text"
+	                    android:textColorHint="#ddd" />
+	            </LinearLayout>
+	            
+	            <TextView
+                    android:id="@+id/help"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center_horizontal"
+                    android:paddingLeft="@dimen/main_text_padding"
+                    android:paddingRight="@dimen/main_text_padding"
+                    android:text="* чем сложнее выбор - тем интереснее!"
+                    android:textColor="#aaa" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="90"
+            android:background="#1e1e23"
+            android:orientation="horizontal"
+            android:paddingTop="1dip" >
+
+            <LinearLayout
+                android:id="@+id/add"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/answer_selector"
+                android:orientation="vertical" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="30" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="95"
+                    android:gravity="center"
+                    android:src="@drawable/add" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="40" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="302.5" >
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="45" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:src="@drawable/circle_new" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="302.5" >
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

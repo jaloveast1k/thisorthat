@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="main_text">#fff</color>
+    <color name="light_text">#9fff</color>
+    <color name="tab_divider">#5a7e8b</color>
+    <color name="up_color">#f07140</color>
+    <color name="down_color">#8a5da7</color>
+    <color name="header_footer">#3a3a3c</color>
+    <color name="darkness">#1e1e23</color>
+    
+    <color name="dividerBackground">#ded9d5</color>
+    <color name="dividerDialogsBackground">#e0dcd8</color>
+    <color name="text_gray">#59554f</color>
+    
+    <color name="activeBtnBackground">#f07140</color>
+    <color name="activeBtnBackgroundPressed">#ef8055</color>
+    <color name="defaultBtnBackground">#524d49</color>
+    <color name="defaultBtnBackgroundPressed">#ff837e7a</color>
+    <color name="premiumBtnBackground">#8a5da7</color>
+    <color name="premiumBtnBackgroundPressed">#906ba7</color>
 </resources>

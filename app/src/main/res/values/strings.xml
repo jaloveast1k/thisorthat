@@ -1,4 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">То или это</string>
+    <string name="app_name">ТО или ЭТО</string>
+	<string name="progress_title">Пожалуйста, подождите&#8230;</string>
+    <string name="progress_message">Отправляется запрос</string>
+	<string name="progress_message_registration">Производится регистрация устройства</string>
+    <string name="progress_message_getting">Получение вопросов</string>
+    <string name="mess_added_successfully_spent">Вопрос добавлен! Потрачено 10 монет. </string>
+    <string name="mess_added_successfully_premium">Вопрос добавлен!</string>
+    <string name="mess_adding_fail">Не удалось добавить вопрос, проверьте интернет и попробуйте снова</string>
+    <string name="var1">Первый вариант</string>
+    <string name="var2">Второй вариант</string>
+    <string name="add_quest">ДОБАВЛЕНИЕ ВОПРОСА</string>
+    <string name="mess_no_questions">К сожалению вопросы закончились, попробуйте снова чуть позже</string>
+    <string name="my_questions">МОИ ВОПРОСЫ</string>
+    <string name="add_out_of_range">Варианты не могут быть короче четырех символов</string>
+    <string name="refresh_fail">Не удалось обновить вопросы, проверьте интернет подключение и попробуйте снова</string>
+    <string name="no_questions_to_share">Нечем поделиться</string>
+    <string name="refreshing">ИДЕТ ОБНОВЛЕНИЕ&#8230;</string>
+    
+    <string name="about_title">О нас</string>
+    <string name="about_text">Перед Вами классическая игра, основанная на выявлении предпочтений людей. Она поможет решить самые сложные жизненные вопросы. Проверьте, насколько Ваш выбор совпадает с выбором окружающих! Теперь вы сможете действительно в себе разобраться, понять, кто Вы есть на самом деле. И знаете что самое замечательное? Теперь Вы можете заниматься этим где угодно и когда угодно, ведь это мобильное приложение предоставляет полный доступ к фишкам нашего сайта - <a href="https://thisorthat.ru/">https://thisorthat.ru/</a></string>
+    
+    <string name="about_group">Нравится приложение? Есть идеи/вопросы/предложения? Подписывайтесь на страницу приложения ВКонтакте!</string>
+    <string name="about_author_ayrat">Разработчик данного приложения - <a href="http://vk.com/jaloveast1k_revived">Сабитов Айрат</a></string>
+    <string name="about_author_ilya">Разработчик iOS-версии приложения - <a href="http://vk.com/diesmal">Николаенко Илья</a></string>
+    <string name="about_author_anton">Разработчик web-версии и серверного api - <a href="http://vk.com/somename">Антон Лукин</a></string>
+    
+    <string name="screen_main">Основной экран</string>
+    <string name="screen_user_questions">Мои вопросы</string>
+    <string name="screen_add_question">Добавление вопроса</string>
+    <string name="screen_about">О нас</string>
 
+    <string name="premium_text_2">Купите премиум - полное отсутствие рекламы!</string>
+    <string name="buy">Купить за </string>
+    <string name="premium_bought">Приобретено</string>
+    
+    <string name="popup_rules">Мы получаем огромное количество вопросов. Большинство из них, к сожалению, отклоняется, что расстраивает пользователей. Посмотрите на правила, которыми мы руководствуемся во время модерации:\n\n	1.	Отклоняются дубликаты (т.е. вопросы, которые уже есть в приложении).\n\n	2.	Нецензурная брань, способы самоубийства, болезни, жуткие и крайне неприятные вещи.\n\n	3.	Бессмыслица или очень специфичные, непонятные большинству людей, вопросы.</string>
+    <string name="popup_coins_help">Для того, чтобы добавить свой вопрос, нужны монетки. Каждый вопрос стоит 10 монет. Монетки начисляются за вашу активность:\n\n	1.	После установки приложения каждый пользователь получает 15 монет.\n\n	2.	Мы ценим интересные, качественные вопросы. Поэтому, если ваш вопрос нам понравился, мы добавим к счету 15 монет!\n\n	3.	Раз в день вы можете получить монету, просто зайдя в приложение.\n\n	4.	Монеты также можно приобрести за реальные деньги. В таком случае каждый ваш вопрос будет рассматриваться в первую очередь</string>
+
+    <string name="popup_gift_daily">Мы ценим, что Вы с нами — держите монетку! Заходите каждый день за новыми!</string>
+    <string name="popup_gift_approve">Рады сообщить, что некоторые Ваши вопросы были проверены модератором и добавлены в приложение. Эти %d монеток — наша Вам признательность!</string>
+    
 </resources>

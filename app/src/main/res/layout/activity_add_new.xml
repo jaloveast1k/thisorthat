@@ -1,0 +1,163 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3a3a3c" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="70" >
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center_vertical"
+                android:text="@string/add_quest"
+                android:textColor="@color/main_text" />
+
+            <ImageView
+                android:id="@+id/coinsIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/coin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/answerUp"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="265"
+            android:background="@drawable/answer_selector_up" >
+
+            <EditText
+                android:id="@+id/textUp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:hint="@string/var1"
+                android:inputType="textCapSentences|textMultiLine"
+                android:maxLength="150"
+                android:nextFocusDown="@+id/textDown"
+                android:nextFocusForward="@+id/textDown"
+                android:paddingLeft="@dimen/main_text_padding"
+                android:paddingRight="@dimen/main_text_padding"
+                android:textColor="@color/main_text"
+                android:textColorHint="#ddd" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/answerDown"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="265"
+            android:background="@drawable/answer_selector_down" >
+
+            <EditText
+                android:id="@+id/textDown"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:hint="@string/var2"
+                android:maxLength="150"
+                android:paddingLeft="@dimen/main_text_padding"
+                android:paddingRight="@dimen/main_text_padding"
+                android:textColor="@color/main_text"
+                android:textColorHint="#ddd" 
+                android:inputType="textCapSentences|textMultiLine"
+                android:imeOptions="actionDone"/>
+            
+            <TextView
+                android:id="@+id/help"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:paddingLeft="@dimen/main_text_padding"
+                android:paddingRight="@dimen/main_text_padding"
+                android:textColor="#aaa"
+                android:gravity="center_horizontal"
+                android:text="* чем сложнее выбор - тем интереснее!" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="70"
+            android:orientation="horizontal" 
+            android:background="#1e1e23"
+            android:paddingTop="1dip">
+
+            <LinearLayout
+                android:id="@+id/add"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/answer_selector"
+                android:orientation="vertical" >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="30" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="55"
+                    android:gravity="center"
+                    android:src="@drawable/add" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="40" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="302.5" >
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="65" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                android:src="@drawable/circle_new" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="302.5" >
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

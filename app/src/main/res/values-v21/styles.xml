@@ -1,0 +1,13 @@
+<resources>
+
+    <style name="AppBaseTheme" parent="Base.Theme.AppCompat.Light">
+        <item name="android:colorPrimary">#000</item>
+        <item name="android:colorPrimaryDark">#000</item>
+        <item name="android:colorAccent">#fff</item>
+    </style>
+
+    <style name="PopupTheme" parent="@android:style/Theme.Material.Dialog">
+
+    </style>
+
+</resources>

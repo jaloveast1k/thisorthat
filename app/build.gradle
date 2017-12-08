@@ -57,6 +57,8 @@ dependencies {
     compile "android.arch.persistence.room:rxjava2:1.0.0-alpha5"
     kapt "android.arch.persistence.room:compiler:1.0.0-alpha5"
 
+    compile 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+
     // tests
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
