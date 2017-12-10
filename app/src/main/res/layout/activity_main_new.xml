@@ -2,12 +2,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/header_footer" >
+    android:background="@color/headerFooter" >
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent" 
-        android:background="@color/header_footer">
+        android:background="@color/headerFooter">
 
         <LinearLayout
             android:id="@+id/root"
@@ -27,7 +27,7 @@
                     android:layout_centerInParent="true"
                     android:gravity="center_vertical"
                     android:text="ТО ИЛИ ЭТО"
-                    android:textColor="@color/main_text" />
+                    android:textColor="@color/mainText" />
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -130,7 +130,7 @@
                     android:gravity="center"
                     android:paddingLeft="@dimen/main_text_padding"
                     android:paddingRight="@dimen/main_text_padding"
-                    android:textColor="@color/main_text" />
+                    android:textColor="@color/mainText" />
                 
                 <TextView
                     android:id="@+id/textUpCount"
@@ -139,7 +139,7 @@
                     android:layout_alignParentBottom="true"
                     android:layout_alignParentLeft="true"
                     android:padding="5dip"
-                    android:textColor="@color/light_text" />
+                    android:textColor="@color/lightText" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -157,7 +157,7 @@
                     android:gravity="center"
                     android:paddingLeft="@dimen/main_text_padding"
                     android:paddingRight="@dimen/main_text_padding"
-                    android:textColor="@color/main_text" />
+                    android:textColor="@color/mainText" />
                 
                 <TextView
                     android:id="@+id/textDownCount"
@@ -166,7 +166,7 @@
                     android:layout_alignParentTop="true"
                     android:layout_alignParentRight="true"
                     android:padding="5dip"
-                    android:textColor="@color/light_text" 
+                    android:textColor="@color/lightText"
                     android:textStyle="bold"/>
             </RelativeLayout>
 
@@ -309,7 +309,7 @@
                     android:layout_alignParentBottom="true"
                     android:gravity="center"
                     android:paddingBottom="2dip"
-                    android:textColor="@color/main_text" />
+                    android:textColor="@color/mainText" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -336,7 +336,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
                     android:gravity="center"
-                    android:textColor="@color/main_text" />
+                    android:textColor="@color/mainText" />
             </RelativeLayout>
         </LinearLayout>
     </RelativeLayout>
@@ -363,7 +363,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:gravity="center"
-                android:textColor="@color/main_text"
+                android:textColor="@color/mainText"
                 android:text="вопрос пока не прошел модерацию"
                 android:padding="2dp"
                 android:visibility="visible"

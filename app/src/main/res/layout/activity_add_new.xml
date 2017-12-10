@@ -21,7 +21,7 @@
                 android:layout_centerInParent="true"
                 android:gravity="center_vertical"
                 android:text="@string/add_quest"
-                android:textColor="@color/main_text" />
+                android:textColor="@color/mainText" />
 
             <ImageView
                 android:id="@+id/coinsIcon"
@@ -54,7 +54,7 @@
                 android:nextFocusForward="@+id/textDown"
                 android:paddingLeft="@dimen/main_text_padding"
                 android:paddingRight="@dimen/main_text_padding"
-                android:textColor="@color/main_text"
+                android:textColor="@color/mainText"
                 android:textColorHint="#ddd" />
         </RelativeLayout>
 
@@ -76,7 +76,7 @@
                 android:maxLength="150"
                 android:paddingLeft="@dimen/main_text_padding"
                 android:paddingRight="@dimen/main_text_padding"
-                android:textColor="@color/main_text"
+                android:textColor="@color/mainText"
                 android:textColorHint="#ddd" 
                 android:inputType="textCapSentences|textMultiLine"
                 android:imeOptions="actionDone"/>

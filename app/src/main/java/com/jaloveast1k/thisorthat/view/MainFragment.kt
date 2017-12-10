@@ -1,18 +1,17 @@
 package com.jaloveast1k.thisorthat.view
 
-import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.Toast
 import com.jaloveast1k.thisorthat.App
 import com.jaloveast1k.thisorthat.R
 
 class MainFragment : MVVMFragment() {
-    private val userListViewModel = App.injectUserListViewModel()
+//    private val userListViewModel = App.injectUserListViewModel()
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.users_fragment, container, false)
+    override fun setLayoutRes(): Int = R.layout.fragment_main
+
+    override fun initUI() {
+
     }
 
     override fun onStart() {

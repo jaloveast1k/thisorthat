@@ -1,25 +1,40 @@
 package com.jaloveast1k.thisorthat.view
 
-import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import android.widget.Toast
-import com.jaloveast1k.thisorthat.App
 import com.jaloveast1k.thisorthat.R
+import com.jaloveast1k.thisorthat.dagger.ControllerModule
+import com.jaloveast1k.thisorthat.view.activities.MainActivity
+import com.jaloveast1k.thisorthat.viewmodel.SplashViewModel
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
+import kotlinx.android.synthetic.main.fragment_splash.*
 import timber.log.Timber
+import javax.inject.Inject
 
 class SplashFragment : MVVMFragment() {
-    private val splashViewModel = App.injectSplashViewModel()
+    val component by lazy { app.component.plus(ControllerModule(this)) }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_splash, container, false)
+    @Inject
+    lateinit var splashViewModel: SplashViewModel
+
+    override fun setLayoutRes(): Int = R.layout.fragment_splash
+
+    override fun initUI() {
+        retry.setOnClickListener({
+            registration()
+            retry.visibility = View.GONE
+        })
     }
 
     override fun onStart() {
         super.onStart()
+
+        component.inject(this)
+
+        registration()
+    }
+
+    private fun registration() {
         subscribe(splashViewModel.registration()
                 .subscribeOn(Schedulers.computation())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -27,23 +42,17 @@ class SplashFragment : MVVMFragment() {
                     Timber.d("Received ${it.token} for user ${it.user}")
                     moveNext()
                 }, {
+                    Timber.d(it)
                     showError()
                 }))
     }
 
     private fun moveNext() {
-
+        openActivity(MainActivity::class.java, finishThis = true)
     }
 
-//    private fun showUsers(data: UsersList) {
-//        when (data.error) {
-//            null -> usersList.adapter = ArrayAdapter(context, android.R.layout.simple_list_item_1, data.users)
-//            is ConnectException -> Timber.d("No connection, maybe inform user that data loaded from DB.")
-//            else -> showError()
-//        }
-//    }
-
     private fun showError() {
-        Toast.makeText(context, "An error occurred :(", Toast.LENGTH_SHORT).show()
+        showMessage(R.string.connection_error)
+        retry.visibility = View.VISIBLE
     }
 }

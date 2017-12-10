@@ -23,7 +23,7 @@
                 android:gravity="center"
                 android:padding="@dimen/main_text_padding"
                 android:text="@string/about_title"
-                android:textColor="@color/main_text" />
+                android:textColor="@color/mainText" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -40,7 +40,7 @@
                 android:gravity="center"
                 android:padding="30dip"
                 android:text="@string/about_group"
-                android:textColor="@color/main_text" />
+                android:textColor="@color/mainText" />
         </RelativeLayout>
 
         <LinearLayout
@@ -67,7 +67,7 @@
                     android:paddingLeft="@dimen/main_text_padding"
                     android:paddingRight="@dimen/main_text_padding"
                     android:text="@string/about_text"
-                    android:textColor="@color/main_text" />
+                    android:textColor="@color/mainText" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -85,7 +85,7 @@
                     android:gravity="center"
                     android:padding="30dip"
                     android:text="@string/about_author_ayrat"
-                    android:textColor="@color/main_text" />
+                    android:textColor="@color/mainText" />
 
                 <TextView
                     android:id="@+id/textIlya"
@@ -97,7 +97,7 @@
                     android:gravity="center"
                     android:padding="30dip"
                     android:text="@string/about_author_ilya"
-                    android:textColor="@color/main_text" />
+                    android:textColor="@color/mainText" />
 
                 <TextView
                     android:id="@+id/textAnton"
@@ -109,7 +109,7 @@
                     android:gravity="center"
                     android:padding="30dip"
                     android:text="@string/about_author_anton"
-                    android:textColor="@color/main_text" />
+                    android:textColor="@color/mainText" />
             </RelativeLayout>
 
             <RelativeLayout

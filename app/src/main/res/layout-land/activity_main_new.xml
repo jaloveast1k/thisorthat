@@ -2,12 +2,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/header_footer" >
+    android:background="@color/headerFooter" >
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/header_footer" >
+        android:background="@color/headerFooter" >
 
         <LinearLayout
             android:id="@+id/root"
@@ -27,7 +27,7 @@
                     android:layout_centerInParent="true"
                     android:gravity="center_vertical"
                     android:text="ТО ИЛИ ЭТО"
-                    android:textColor="@color/main_text" />
+                    android:textColor="@color/mainText" />
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -154,7 +154,7 @@
                             android:gravity="center"
                             android:paddingLeft="@dimen/main_text_padding"
                             android:paddingRight="@dimen/main_text_padding"
-                            android:textColor="@color/main_text" />
+                            android:textColor="@color/mainText" />
 
                         <View
                             android:layout_width="0dip"
@@ -183,7 +183,7 @@
                             android:gravity="center"
                             android:paddingLeft="@dimen/main_text_padding"
                             android:paddingRight="@dimen/main_text_padding"
-                            android:textColor="@color/main_text" />
+                            android:textColor="@color/mainText" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -204,7 +204,7 @@
                             android:layout_alignParentRight="true"
                             android:layout_alignParentTop="true"
                             android:padding="5dip"
-                            android:textColor="@color/light_text" />
+                            android:textColor="@color/lightText" />
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -218,7 +218,7 @@
                             android:layout_alignParentTop="true"
                             android:layout_alignParentLeft="true"
                             android:padding="5dip"
-                            android:textColor="@color/light_text" />
+                            android:textColor="@color/lightText" />
                     </RelativeLayout>
                 </LinearLayout>
             </RelativeLayout>
@@ -369,7 +369,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="47.5"
                     android:gravity="center"
-                    android:textColor="@color/main_text" />
+                    android:textColor="@color/mainText" />
             </LinearLayout>
 
             <RelativeLayout
@@ -398,7 +398,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="47.5"
                     android:gravity="center"
-                    android:textColor="@color/main_text" />
+                    android:textColor="@color/mainText" />
 
                 <View
                     android:layout_width="0dip"
@@ -431,7 +431,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:gravity="center"
-                android:textColor="@color/main_text"
+                android:textColor="@color/mainText"
                 android:text="вопрос пока не прошел модерацию"
                 android:padding="2dp"
                 android:visibility="visible"

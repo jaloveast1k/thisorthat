@@ -3,7 +3,6 @@
     <string name="app_name">ТО или ЭТО</string>
 	<string name="progress_title">Пожалуйста, подождите&#8230;</string>
     <string name="progress_message">Отправляется запрос</string>
-	<string name="progress_message_registration">Производится регистрация устройства</string>
     <string name="progress_message_getting">Получение вопросов</string>
     <string name="mess_added_successfully_spent">Вопрос добавлен! Потрачено 10 монет. </string>
     <string name="mess_added_successfully_premium">Вопрос добавлен!</string>
@@ -40,5 +39,7 @@
 
     <string name="popup_gift_daily">Мы ценим, что Вы с нами — держите монетку! Заходите каждый день за новыми!</string>
     <string name="popup_gift_approve">Рады сообщить, что некоторые Ваши вопросы были проверены модератором и добавлены в приложение. Эти %d монеток — наша Вам признательность!</string>
-    
+
+    <string name="connection_error">Ошибка соединения</string>
+    <string name="retry">Повторить</string>
 </resources>

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/premium_popup_bg"
     android:orientation="vertical"
-    tools:context=".MainActivity" >
+    tools:context=".view.activities.MainActivity" >
 
     <LinearLayout
         android:id="@+id/mainLayout"
@@ -35,7 +35,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/popup_coins_help"
-            android:textColor="@color/text_gray" 
+            android:textColor="@color/textGray"
             android:gravity="center_horizontal"/>
     </LinearLayout>
 

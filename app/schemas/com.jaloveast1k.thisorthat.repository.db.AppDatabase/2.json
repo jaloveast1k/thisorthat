@@ -1,0 +1,72 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 2,
+    "identityHash": "8cec246bd326130ebe95413a4312cf9a",
+    "entities": [
+      {
+        "tableName": "quests",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`text_up` TEXT, `text_down` TEXT, `vote_up` INTEGER, `vote_down` INTEGER, `answer` INTEGER, `quest_id` INTEGER, `quest_type` INTEGER, `quest_approve` INTEGER, `moderate` INTEGER, PRIMARY KEY(`quest_id`))",
+        "fields": [
+          {
+            "fieldPath": "textUp",
+            "columnName": "text_up",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "textDown",
+            "columnName": "text_down",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "voteUp",
+            "columnName": "vote_up",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "voteDown",
+            "columnName": "vote_down",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "answer",
+            "columnName": "answer",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "serverId",
+            "columnName": "quest_id",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "quest_type",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "approve",
+            "columnName": "quest_approve",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "moderate",
+            "columnName": "moderate",
+            "affinity": "INTEGER"
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "quest_id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"8cec246bd326130ebe95413a4312cf9a\")"
+    ]
+  }
+}

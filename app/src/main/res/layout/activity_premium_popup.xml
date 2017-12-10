@@ -63,7 +63,7 @@
                     android:ellipsize="end"
                     android:maxLines="3"
                     android:text="@string/premium_text_2"
-                    android:textColor="@color/text_gray" />
+                    android:textColor="@color/textGray" />
             </RelativeLayout>
 
             <View

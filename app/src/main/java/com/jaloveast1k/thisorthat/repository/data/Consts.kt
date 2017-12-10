@@ -5,6 +5,10 @@ package com.jaloveast1k.thisorthat.repository.data
  */
 
 class Consts {
+    object General {
+        const val PREFS_NAME = "prefs_name"
+    }
+
     object SharedPrefs {
         const val TOKEN = "token"
         const val USER_ID = "user_id"
