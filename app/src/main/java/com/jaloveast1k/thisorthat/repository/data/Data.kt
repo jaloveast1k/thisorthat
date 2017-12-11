@@ -3,30 +3,37 @@ package com.jaloveast1k.thisorthat.repository.data
 import android.arch.persistence.room.ColumnInfo
 import android.arch.persistence.room.Entity
 import android.arch.persistence.room.PrimaryKey
-
-val client = "android"
+import com.google.gson.annotations.SerializedName
 
 /*
 TODO: В старой версии id задавался руками и обозначался как _id, так же все поля были типа String, порядок сохранен
  */
 @Entity(tableName = "quests")
 data class Question(
+        @SerializedName("left_text")
         @ColumnInfo(name = "text_up")
-        val textUp: String,
+        var textUp: String,
+        @SerializedName("right_text")
         @ColumnInfo(name = "text_down")
-        val textDown: String,
+        var textDown: String,
+        @SerializedName("left_vote")
         @ColumnInfo(name = "vote_up")
-        val voteUp: Int,
+        var voteUp: Int,
+        @SerializedName("right_vote")
         @ColumnInfo(name = "vote_down")
-        val voteDown: Int,
+        var voteDown: Int,
         @ColumnInfo(name = "answer")
-        val answer: Int,
+        var answer: String = Consts.General.ANSWER_NO,
         @PrimaryKey
         @ColumnInfo(name = "quest_id")
-        val serverId: Int,
+        var serverId: Int,
         @ColumnInfo(name = "quest_type")
-        val type: Int,
+        var type: Int,
         @ColumnInfo(name = "quest_approve")
-        val approve: Int,
+        var approve: Int,
+        @SerializedName("moderate")
         @ColumnInfo(name = "moderate")
-        val moderate: Int)
+        var moderate: Int) {
+    fun percentDown(): Int = if (voteDown + voteUp == 0) 50 else voteDown * 100 / (voteDown + voteUp)
+    fun percentUp(): Int = 100 - percentDown()
+}

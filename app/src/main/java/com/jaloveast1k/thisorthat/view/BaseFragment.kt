@@ -1,8 +1,6 @@
 package com.jaloveast1k.thisorthat.view
 
-import android.app.Activity
-import android.content.ContentValues
-import android.content.Intent
+import android.graphics.Point
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.view.ContextThemeWrapper
@@ -11,11 +9,16 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import com.jaloveast1k.thisorthat.App
+import com.jaloveast1k.thisorthat.dagger.ControllerModule
+import com.jaloveast1k.thisorthat.view.activities.BaseActivity
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
 
-abstract class MVVMFragment : Fragment() {
+abstract class BaseFragment : Fragment() {
     private val subscriptions = CompositeDisposable()
+
+    protected var screenWidth = 0
+    protected var screenHeight = 0
 
     fun subscribe(disposable: Disposable): Disposable {
         subscriptions.add(disposable)
@@ -43,11 +46,26 @@ abstract class MVVMFragment : Fragment() {
             localInflater.inflate(setLayoutRes(), container, false)
         }
 
+        val display = activity.windowManager.defaultDisplay
+        val size = Point()
+        display.getSize(size)
+        screenWidth = Math.min(size.x, size.y)
+        screenHeight = Math.max(size.x, size.y)
+
         return view
     }
 
     override fun onStart() {
         super.onStart()
+
+        if (App.fragmentClass != this.javaClass) {
+            App.controllerComponent = app.component.plus(ControllerModule(this))
+            App.fragmentClass = this.javaClass
+        }
+        when (this) {
+            is MainFragment -> App.controllerComponent?.inject(this)
+            is SplashFragment -> App.controllerComponent?.inject(this)
+        }
 
         initUI()
     }
@@ -69,37 +87,9 @@ abstract class MVVMFragment : Fragment() {
             Toast.makeText(activity, actualText, Toast.LENGTH_SHORT).show()
     }
 
-    protected fun <T : Any> openActivity(clazz: Class<T>, params: ContentValues? = null, requestCode: Int = -1, finishThis: Boolean = false) {
-        if (!isAdded) return
-
-        val i = Intent()
-        i.setClass(activity, clazz)
-
-        if (params != null) {
-            for (key in params.keySet()) {
-                val value = params.get(key)
-                when (value) {
-                    is String -> i.putExtra(key, value)
-                    is Int -> i.putExtra(key, value)
-                    is Boolean -> i.putExtra(key, value)
-                    is Double -> i.putExtra(key, value)
-                    is Float -> i.putExtra(key, value)
-                    else -> throw UnsupportedOperationException("Wrong type")
-                }
-            }
-        }
-
-        if (finishThis) {
-            activity.finish()
-        }
-
-        if (requestCode != -1) {
-            startActivityForResult(i, requestCode)
-        } else {
-            startActivity(i)
-        }
-    }
-
-    val MVVMFragment.app: App
+    val BaseFragment.app: App
         get() = activity.application as App
+
+    val BaseFragment.baseActivity: BaseActivity?
+        get() = activity as? BaseActivity
 }

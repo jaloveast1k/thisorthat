@@ -6,14 +6,15 @@
     <string name="progress_message_getting">Получение вопросов</string>
     <string name="mess_added_successfully_spent">Вопрос добавлен! Потрачено 10 монет. </string>
     <string name="mess_added_successfully_premium">Вопрос добавлен!</string>
-    <string name="mess_adding_fail">Не удалось добавить вопрос, проверьте интернет и попробуйте снова</string>
+    <string name="error_adding">Не удалось добавить вопрос, проверьте интернет и попробуйте снова</string>
     <string name="var1">Первый вариант</string>
     <string name="var2">Второй вариант</string>
     <string name="add_quest">ДОБАВЛЕНИЕ ВОПРОСА</string>
     <string name="mess_no_questions">К сожалению вопросы закончились, попробуйте снова чуть позже</string>
     <string name="my_questions">МОИ ВОПРОСЫ</string>
     <string name="add_out_of_range">Варианты не могут быть короче четырех символов</string>
-    <string name="refresh_fail">Не удалось обновить вопросы, проверьте интернет подключение и попробуйте снова</string>
+    <string name="error_refresh">Не удалось обновить вопросы, проверьте интернет подключение и попробуйте снова</string>
+    <string name="error_answer">Во время отправки ответа произошла ошибка</string>
     <string name="no_questions_to_share">Нечем поделиться</string>
     <string name="refreshing">ИДЕТ ОБНОВЛЕНИЕ&#8230;</string>
     
@@ -40,6 +41,7 @@
     <string name="popup_gift_daily">Мы ценим, что Вы с нами — держите монетку! Заходите каждый день за новыми!</string>
     <string name="popup_gift_approve">Рады сообщить, что некоторые Ваши вопросы были проверены модератором и добавлены в приложение. Эти %d монеток — наша Вам признательность!</string>
 
-    <string name="connection_error">Ошибка соединения</string>
+    <string name="error_connection">Ошибка соединения</string>
     <string name="retry">Повторить</string>
+    <string name="question_skipped">Вопрос пропущен, а его рейтинг снижен, спасибо за отзыв!</string>
 </resources>

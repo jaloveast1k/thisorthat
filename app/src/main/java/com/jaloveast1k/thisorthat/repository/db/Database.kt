@@ -5,7 +5,7 @@ import android.arch.persistence.room.RoomDatabase
 import com.jaloveast1k.thisorthat.repository.data.Question
 
 
-@Database(entities = arrayOf(Question::class), version = 2)
+@Database(entities = arrayOf(Question::class), version = 3)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun questionDao(): QuestionDao
 }

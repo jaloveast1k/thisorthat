@@ -27,7 +27,8 @@
                     android:layout_centerInParent="true"
                     android:gravity="center_vertical"
                     android:text="ТО ИЛИ ЭТО"
-                    android:textColor="@color/mainText" />
+                    android:textColor="@color/mainText"
+                    android:fontFamily="@font/robotocondensed"/>
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -154,7 +155,8 @@
                             android:gravity="center"
                             android:paddingLeft="@dimen/main_text_padding"
                             android:paddingRight="@dimen/main_text_padding"
-                            android:textColor="@color/mainText" />
+                            android:textColor="@color/mainText"
+                            android:fontFamily="@font/robotocondensed"/>
 
                         <View
                             android:layout_width="0dip"
@@ -183,7 +185,8 @@
                             android:gravity="center"
                             android:paddingLeft="@dimen/main_text_padding"
                             android:paddingRight="@dimen/main_text_padding"
-                            android:textColor="@color/mainText" />
+                            android:textColor="@color/mainText"
+                            android:fontFamily="@font/robotocondensed"/>
                     </LinearLayout>
                 </LinearLayout>
 
@@ -204,7 +207,8 @@
                             android:layout_alignParentRight="true"
                             android:layout_alignParentTop="true"
                             android:padding="5dip"
-                            android:textColor="@color/lightText" />
+                            android:textColor="@color/lightText"
+                            android:fontFamily="@font/robotocondensed"/>
                     </RelativeLayout>
 
                     <RelativeLayout
@@ -218,7 +222,8 @@
                             android:layout_alignParentTop="true"
                             android:layout_alignParentLeft="true"
                             android:padding="5dip"
-                            android:textColor="@color/lightText" />
+                            android:textColor="@color/lightText"
+                            android:fontFamily="@font/robotocondensed"/>
                     </RelativeLayout>
                 </LinearLayout>
             </RelativeLayout>
@@ -330,7 +335,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="140" >
 
-                <com.jaloveast1k.thisorthat.Diagramm
+                <com.jaloveast1k.thisorthat.view.views.Diagramm
                     android:id="@+id/diagramm"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -369,7 +374,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="47.5"
                     android:gravity="center"
-                    android:textColor="@color/mainText" />
+                    android:textColor="@color/mainText"
+                    android:fontFamily="@font/robotocondensed"/>
             </LinearLayout>
 
             <RelativeLayout
@@ -398,7 +404,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="47.5"
                     android:gravity="center"
-                    android:textColor="@color/mainText" />
+                    android:textColor="@color/mainText"
+                    android:fontFamily="@font/robotocondensed"/>
 
                 <View
                     android:layout_width="0dip"
@@ -436,7 +443,8 @@
                 android:padding="2dp"
                 android:visibility="visible"
                 android:background="#5000"
-                android:textAllCaps="true"/>
+                android:textAllCaps="true"
+                android:fontFamily="@font/robotocondensed"/>
 
             <LinearLayout
                 android:id="@+id/adLayout"

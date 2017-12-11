@@ -4,6 +4,7 @@ import android.view.View
 import com.jaloveast1k.thisorthat.R
 import com.jaloveast1k.thisorthat.dagger.ControllerModule
 import com.jaloveast1k.thisorthat.view.activities.MainActivity
+import com.jaloveast1k.thisorthat.view.activities.openActivity
 import com.jaloveast1k.thisorthat.viewmodel.SplashViewModel
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
@@ -11,8 +12,8 @@ import kotlinx.android.synthetic.main.fragment_splash.*
 import timber.log.Timber
 import javax.inject.Inject
 
-class SplashFragment : MVVMFragment() {
-    val component by lazy { app.component.plus(ControllerModule(this)) }
+class SplashFragment : BaseFragment() {
+//    private val component by lazy { app.component.plus(ControllerModule(this)) }
 
     @Inject
     lateinit var splashViewModel: SplashViewModel
@@ -29,7 +30,7 @@ class SplashFragment : MVVMFragment() {
     override fun onStart() {
         super.onStart()
 
-        component.inject(this)
+//        component.inject(this)
 
         registration()
     }
@@ -48,11 +49,11 @@ class SplashFragment : MVVMFragment() {
     }
 
     private fun moveNext() {
-        openActivity(MainActivity::class.java, finishThis = true)
+        baseActivity?.openActivity(MainActivity::class.java, finishThis = true)
     }
 
     private fun showError() {
-        showMessage(R.string.connection_error)
+        showMessage(R.string.error_connection)
         retry.visibility = View.VISIBLE
     }
 }
